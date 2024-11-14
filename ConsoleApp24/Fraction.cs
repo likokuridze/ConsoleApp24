@@ -7,22 +7,17 @@
 
     public Fraction(int numerator, int denominator)
     {
-
         // ვამოწმებთ მნიშვნელი არ არის თუ არა 0
         if (denominator == 0)
         {
-            Console.WriteLine("მნიშვნელი არ შეიძლება იყოს 0!");
-          
-            _denominator = 1;
+            throw new Exception("მნიშვნელი არ შეიძლება იყოს 0!");
         }
-        else
-        {
-            _denominator = denominator;
-        }
+
         _numerator = numerator;
+        _denominator = denominator;
     }
 
-    // წილადის ტექსტად გამოტანა
+
     public override string ToString()
     {
         return $"{_numerator}/{_denominator}";
@@ -49,7 +44,6 @@
         return !(a == b);
     }
 }
-
 
 
 
